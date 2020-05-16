@@ -44,7 +44,7 @@
         <div class="row align-items-center">
           
           <div class="col-11 col-xl-2">
-            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Logistics</a></h1>
+            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Rtrans Logistics</a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -89,7 +89,7 @@
             
 
             <h1 class="text-white font-weight-light mb-5 text-uppercase font-weight-bold">Worldwide Freight Services</h1>
-            <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Get Started!</a></p>
+            <!-- <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Get Started!</a></p> -->
 
           </div>
         </div>
@@ -110,19 +110,182 @@
         <div class="col-md-4">
           <div class="free-quote bg-dark h-100">
             <h2 class="my-4 heading  text-center">Get Free Quote</h2>
-            <form method="post">
+            
               <div class="form-group">
-                <label for="fq_name">Name</label>
-                <input type="text" class="form-control btn-block" id="fq_name" name="fq_name" placeholder="Enter Name">
+                <label for="country">1. Where is your package going? </label>
               </div>
+
+              <div class="select form-group">
+                <select name="slct" id="slct" autocomplete="off">
+                  <option selected disabled>Choose an option</option>
+                  <option value="1">U.S.A</option>
+                  <option value="2">China</option>
+                  <option value="3">Germany</option>
+                  <option value="4">Domestic</option>
+                </select>
+              </div>  
+
               <div class="form-group mb-4">
-                <label for="fq_email">Email</label>
-                <input type="text" class="form-control btn-block" id="fq_email" name="fq_email" placeholder="Enter Email">
+                <label for="weight">2. About how much does it weigh?</label>
+                <input type="text" class="form-control mt-2"id="weight" autocomplete="off">
               </div>
-              <div class="form-group">
-                <input type="submit" class="btn btn-primary text-white py-2 px-4 btn-block" value="Get Quote">  
+
+              <div class="row">
+                <div class="col">
+                  <button class="btn btn-sm btn-primary text-white py-2 btn-block" id="kgs" value="Get Quote">
+                  kgs
+                  </button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-sm btn-primary text-white py-2 btn-block" id="lbs" value="Get Quote">
+                  lbs
+                  </button>
+                </div>   
               </div>
-            </form>
+
+              <!-- Link to open the modal -->
+              <div class="mx-4 pt-3 mm">
+                <p><a href="#ex1" rel="modal:open">View all rates up to 5 Kgs</a></p>               
+              </div>  
+
+              <button class="btn btn-sm btn-primary text-white py-2 btn-block mt-4" value="Get Quote" id="rate">
+              get shipping rates
+              </button>             
+              <!-- <button class="btn btn-primary text-white mt-4" id="rr" type="button" id="button-addon2">rate</button> -->
+              
+              <!-- Modal HTML embedded directly into document -->
+              <div id="ex1" class="modal">
+                <p><h5>Shipping Rates</h5></p>
+                <table class="table table-striped table-bordered text-center">
+                  <thead>
+                    <tr>
+                      <th>  
+                      <div class="row">
+                        <div class="col">
+                          Weight                    
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <small>in kgs</small>                    
+                        </div>
+                      </div>                 
+                      </th>
+
+                      <th>
+                      <div class="row">
+                        <div class="col">
+                            Small Pack Saver                      
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <small>7-20 days</small>                    
+                        </div>
+                      </div>
+                      </th>
+
+                      <th>
+                      <div class="row">
+                        <div class="col">
+                            Budget Economy                      
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <small>5-10 days</small>                    
+                        </div>
+                      </div>
+                      </th>
+
+                      <th>
+                      <div class="row">
+                        <div class="col">
+                            Budget Express                      
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <small>4-9 days</small>                    
+                        </div>
+                      </div>
+                      </th>  
+
+                      <th>
+                      <div class="row">
+                        <div class="col">
+                            FedEx Economy                      
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <small>2-5 days</small>                    
+                        </div>
+                      </div>
+                      </th>    
+
+                      <th>
+                      <div class="row">
+                        <div class="col">
+                            FedEx Prioriy                     
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <small>1-3 days</small>                    
+                        </div>
+                      </div>
+                      </th>                                          
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">1 kgs</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">2 kgs</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">3 kgs</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">4 kgs</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                    </tr>
+                    <tr>
+                      <td scope="row">5 kgs</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                      <td>2000 INR</td>
+                    </tr>                                                            
+                  </tbody>
+                </table>
+                <hr>
+                <a href="#" rel="modal:close" class="btn btn-primary">Close</a>
+              </div>            
+
           </div>
         </div>
         <div class="col-md-4">
@@ -240,9 +403,6 @@
 
       </div>
     </div>
-
-
-    
 
     <div class="site-section bg-light">
       <div class="container">
@@ -515,7 +675,50 @@
   <script src="js/bootstrap-datepicker.min.js"></script>
   <script src="js/aos.js"></script>
 
+  <!-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />  -->
+
   <script src="js/main.js"></script>
-    
+
+
+  <script type="text/javascript">
+  
+    $("#lbs").css("background-color", "#a87425");  
+
+    $('#rr').click(function() {
+      console.log("hello");
+    });
+
+    $('#kgs').click(function(){            
+      // document.getElementById("lbs").disabled = false; 
+      // document.getElementById("kgs").disabled = true; 
+      $("#kgs").css("background-color", "#eb9007");       
+      $("#lbs").css("background-color", "#a87425");  
+    });
+
+    $('#lbs').click(function(){ 
+
+      // document.getElementById("kgs").disabled = true; 
+      // document.getElementById("lbs").disabled = false;
+
+      // console.log("lbs is clicked");         
+      $("#lbs").css("background-color", "#eb9007");       
+      $("#kgs").css("background-color", "#a87425");       
+    });    
+
+    $('#rate').click(function(){            
+      var w = $('#weight').val();
+
+      if(isNaN(w))
+      {
+        alert('must enter number');
+      }
+      else
+      {
+        console.log(w);
+      }
+    });   
+  </script>
   </body>
 </html>

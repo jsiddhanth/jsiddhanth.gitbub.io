@@ -107,7 +107,7 @@
 
     <div class="container">
       <div class="row align-items-center no-gutters align-items-stretch overlap-section">
-        <div class="col-md-4">
+        <div class="col-lg-4">
           <div class="feature-1 pricing h-100 text-center">
             <div class="icon">
               <span class="icon-dollar"></span>
@@ -116,7 +116,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ipsum odio minima tempora animi iure.</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4">
           <div class="free-quote bg-dark h-100">
             <h2 class="my-4 heading  text-center">Get Free Quote</h2>
             
@@ -152,12 +152,15 @@
                 </div>   
               </div>
 
+              <div class="form-group">
               <!-- Link to open the modal -->
-              <div class="mx-4 pt-3 mm">
+              <div class="mx-4 pt-3 mm text-center" id="viewAllRates">
                 <p><a href="#ex1" rel="modal:open">View all rates up to 5 Kgs</a></p>               
-              </div>  
+              </div>               
+              
+              </div>
 
-              <button class="btn btn-sm btn-primary text-white py-2 btn-block mt-4" value="Get Quote" id="rate">
+              <button class="btn btn-sm btn-primary text-white py-1 btn-block mt-4" value="Get Quote" id="rate">
               get shipping rates
               </button>             
               <!-- <button class="btn btn-primary text-white mt-4" id="rr" type="button" id="button-addon2">rate</button> -->
@@ -297,7 +300,7 @@
 
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4">
           <div class="feature-3 pricing h-100 text-center">
 
             <div class="icc">
@@ -702,6 +705,41 @@
 
   <script type="text/javascript">
   
+    $(document).ready(function() {
+
+      var x = $('#viewAllRates').offset();
+      // console.log(x.top);
+      var xtop = x;
+
+      $(window).scroll(function() {
+
+        var ws_height = $(window).height();
+        var st_pos    = $(window).scrollTop();
+        var ws_bottom = ws_height + st_pos;
+
+        var h1 = $(window).height();
+        var h = h1/3;
+        var center = ws_bottom - h;
+
+        if(center >= x.top) {
+  
+          $(".mm a").css("text-shadow","2px 16px 6px black");
+          $(".mm a").css("font-size","18px");
+          $(".icc a").css("color","#343a40");
+
+        } else {
+
+          $(".mm a").css("font-size","15px");
+          // $(".mm a").css("color","white"); 
+          $(".mm a").css("text-shadow","none"); 
+          $(".icc a").css("color","white"); 
+                                     
+        }
+
+      })
+
+    });
+
     $("#lbs").css("background-color", "#a87425");  
 
     $('#rr').click(function() {

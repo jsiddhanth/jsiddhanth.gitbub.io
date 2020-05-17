@@ -1590,9 +1590,44 @@ line-height: 80px;
 position: relative;
 border-radius: 50%;
 margin: 0 auto !important;
+
 }
 
 .icc a {
 color :white;
 
+}
+.icc a:hover {
+  color:#343a40;
+}
+
+ /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 90%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 30px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  color: #343a40;
+  box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.watsapp {
+  background: #f89d13;
+  color: white;
 }

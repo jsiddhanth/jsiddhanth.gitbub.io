@@ -1604,7 +1604,7 @@ color :white;
  /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 .icon-bar {
   position: fixed;
-  top: 90%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1630,4 +1630,13 @@ color :white;
 .watsapp {
   background: #f89d13;
   color: white;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .icon-bar {
+    position: fixed;
+    top: 90%;
+  }
+
 }

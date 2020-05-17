@@ -1581,3 +1581,18 @@ select {
   color: white;
   font-size: 1.1rem;
 }
+
+.icc{
+
+width: 80px;
+height: 80px;
+line-height: 80px;
+position: relative;
+border-radius: 50%;
+margin: 0 auto !important;
+}
+
+.icc a {
+color :white;
+
+}

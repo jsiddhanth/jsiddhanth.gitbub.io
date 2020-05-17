@@ -1639,14 +1639,18 @@ color :white;
     top: 75%;
   }
   
-.icon-bar a:active {
-  color: #343a40;
-  box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-}  
+  .icon-bar a:active {
+    color: #343a40;
+    box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  }  
 
-.icon-bar a:hover {
-  color: #343a40;
-  box-shadow:none;
-}
+  .icon-bar a:hover {
+    color: #343a40;
+    box-shadow:none;
+  }
+
+  #tt {
+    font-size: 0.8rem;
+  }
 
 }
